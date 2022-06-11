@@ -65,11 +65,15 @@
   box-shadow: 3px 3px 3px #ccc;
 }
 .phonenumber input:disabled {
-  background-color: #ccc !important;
+  /* background-color: #ccc !important;
+   */
+  opacity: 0.5;
   cursor: wait !important;
 }
 .phonenumber button:disabled {
-  background-color: #ccc !important;
+  /* background-color: #ccc !important;
+   */
+  opacity: 0.5;
   cursor: wait !important;
 }
 .erromessage {
