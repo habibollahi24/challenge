@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Home from "./pages/Home";
+import { Switch, Route } from "react-router-dom";
+import LoginForm from "./pages/LoginForm";
+import Verify from "./pages/Verify";
+import "./App.css";
 
 function App() {
+  const [number, setNumber] = useState("");
+
+  const sendNumber = (num) => {
+    setNumber(num);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Switch>
+        <Route path="/verify" render={(props) => <Verify number={number} {...props} />} />
+        <Route path="/login" render={(props) => <LoginForm sendNumber={sendNumber} {...props} />} />
+        <Route exact path="/" component={Home} />
+      </Switch>
     </div>
   );
 }

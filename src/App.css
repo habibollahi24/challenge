@@ -1,38 +1,79 @@
-.App {
+.app {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app h2 {
+  background-color: beige;
+  padding: 2rem;
+  width: 100vw;
+  margin: 0rem auto;
+  border-radius: 10px;
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  background-color: #f6f6f6;
+  padding: 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-logout {
+  background-color: tomato;
+}
+.btn-login {
+  background-color: rgb(30, 33, 245);
+}
+.phonenumber {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  width: 400px;
+  margin: 0 auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.phonenumber form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  padding: 2rem;
+  border-radius: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.phonenumber label {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+}
+.phonenumber input {
+  border-radius: 5px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0 1rem 0;
+}
+.phonenumber input:focus {
+  outline: none;
+  box-shadow: 3px 3px 3px #ccc;
+}
+.phonenumber input:disabled {
+  background-color: #ccc !important;
+  cursor: wait !important;
+}
+.phonenumber button:disabled {
+  background-color: #ccc !important;
+  cursor: wait !important;
+}
+.erromessage {
+  color: tomato;
+  margin: 10px 0;
+  font-weight: 600;
 }
